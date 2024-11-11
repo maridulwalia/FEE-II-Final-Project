@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Work | Service Promotion Hub</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Boostrap CSS-->
+  <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">-->
+  <link rel="icon" href="Logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <link rel="stylesheet" href="Work Css.css" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet" />
+</head>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll(
+      ".fade-in,.enterance-text"
+    );
+
+    const zoomElements = document.querySelectorAll(".zoom-out-element"); // Select elements that should have the zoom out animation
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // Stop observing once it's visible
+          }
+        });
+      },
+      { threshold: 0.1 }
+    ); // Adjust threshold as needed
+
+    fadeElements.forEach((element) => {
+      observer.observe(element);
+    });
+
+    // Add zoom out animation to specific elements
+    zoomElements.forEach((element) => {
+      observer.observe(element);
+      element.classList.add("zoom-out-init"); // Add initial class to trigger animation
+    });
+  });
+
+  function animateArrows() {
+    const leftArrows = document.querySelectorAll('.left-arrow');
+    const rightArrows = document.querySelectorAll('.right-arrow');
+
+    leftArrows.forEach((leftArrow) => {
+      let leftPosition = 0;
+      let direction = 1;
+
+      function moveArrow() {
+        leftPosition += 1.5 * direction;
+
+        if (leftPosition >= 50 || leftPosition <= 0) {
+          direction *= -1;
+        }
+
+        leftArrow.style.transform = `translateX(${leftPosition}px)`;
+
+        requestAnimationFrame(moveArrow);
+      }
+
+      moveArrow();
+    });
+
+    rightArrows.forEach((rightArrow) => {
+      let rightPosition = 0;
+      let direction = 1;
+
+      function moveArrow() {
+        rightPosition -= 1.5 * direction;
+
+        if (rightPosition <= -50 || rightPosition >= 0) {
+          direction *= -1;
+        }
+
+        rightArrow.style.transform = `translateX(${rightPosition}px)`;
+
+        requestAnimationFrame(moveArrow);
+      }
+
+      moveArrow();
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', animateArrows);
+</script>
+
+<body>
+  <header>
+    <div class="header-container">
+      <img src="Images/Office Decor Top Pic.png" alt="Header Image" class="header-image fade-in" />
+      <div class="center-container">
+        <h1 class="title zoom-out-init">Our Work</h1>
+      </div>
+    </div>
+    <button class="toggle-button fade-in" onclick="toggleDarkMode()">
+      <i class="fas fa-moon" id="toggleIcon"></i>
+    </button>
+    <div class="logo-container" id="logoContainer">
+      <a href="Home.html">
+        <img src="Logo.png" alt="Logo" class="fade-in" />
+      </a>
+    </div>
+    <nav class="navbar fade-in" id="navbar">
+      <ul>
+        <li><a href="Clients.html">CLIENTS</a></li>
+        <li><a href="Work.html">WORK</a></li>
+        <li><a href="Service.html">SERVICES</a></li>
+        <li><a href="Leadership.html">LEADERSHIP</a></li>
+        <li><a href="#">FORUM</a></li>
+      </ul>
+    </nav>
+    <ul class="right-nav fade-in" id="right-nav">
+      <li><a href="Contact.html">CONTACT</a></li>
+    </ul>
+  </header>
+  <!--Boostrap JS-->
+  <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">-->
+  <div class="main-content">
+    <p style="
+          font-size: 25px;
+          font-family: Libre Baskerville, serif;
+          text-align: center;
+        " class="enterance-text">
+      &#9884; Our Philosophy &#9884;
+    </p>
+    <p style="
+          margin-top: 80px;
+          margin-right: 60px;
+          margin-left: 60px;
+          font-family: Alumni Sans Pinstripe, sans-serif;
+          text-align: center;
+          font-size: 50px;
+          font-weight: bolder;
+          line-height: 1.5;
+          font-style: italic;
+        " class="enterance-text">
+      At Service Promotion Hub, we believe every brand has a unique story. We
+      connect brands with their audiences through authentic messaging,
+      innovative strategies, and results-driven approaches.<br />
+      Our goal is to elevate your brand’s presence and impact in a dynamic
+      market. Let us help you tell your story and make a lasting impression.
+    </p>
+    <p style="
+          margin-top: 100px;
+          font-family: Alumni Sans Pinstripe, sans-serif;
+          text-align: center;
+          font-size: 25px;
+          font-family: Libre Baskerville, serif;
+        " class="enterance-text">
+      Scroll To View Our Work<br />
+      &darr;
+    </p>
+    <div style="margin-top: 200px; display: flex; justify-content: center" class="fade-in">
+      <div class="image-container">
+        <div class="image-wrapper">
+          <img src="Images/Coffee Shop.png" alt="Image 1" style="border-radius: 2%; width: 400px; height: 350px" />
+          <button class="view-button"><a href="Work Sites/Cafe Elysee.html" class="button-link">View</a></button>
+        </div>
+        <div class="image-info">
+          <p style="font-size: 50px">Café<br />Elysée</p>
+          <span style="font-weight: bold; margin-left: 50px; font-size: 40px">Beverages</span>
+        </div>
+      </div>
+      <div class="image-container">
+        <div class="image-wrapper">
+          <img src="Images/Forest Camp.png" alt="Image 2" style="border-radius: 2%; width: 400px; height: 350px" />
+          <button class="view-button"><a href="Work Sites/Forest Camp.html" class="button-link">View</a></button>
+        </div>
+        <div class="image-info">
+          <p style="font-size: 50px">Forest<br />Camp</p>
+          <span style="font-weight: bold; margin-left: 70px; font-size: 40px">Travel</span>
+        </div>
+      </div>
+      <div class="image-container">
+        <div class="image-wrapper">
+          <img src="Images//Herbal Medicines.png" alt="Image 3"
+            style="border-radius: 2%; width: 400px; height: 350px" />
+          <button class="view-button"><a href="Work Sites/Herbal Exiler.html" class="button-link">View</a></button>
+        </div>
+        <div class="image-info">
+          <p style="font-size: 50px">Herb<br />Elixer</p>
+          <span style="font-weight: bold; margin-left: 70px; font-size: 40px">Consumer Products</span>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 100px; display: flex; justify-content: center" class="fade-in">
+      <div class="image-container">
+        <div class="image-wrapper">
+          <img src="Images/Royal Scott Crystals.png" alt="Image 4"
+            style="border-radius: 2%; width: 400px; height: 350px" />
+          <button class="view-button"><a href="Work Sites/Royal Scot Crystals.html" class="button-link">View</a></button>
+        </div>
+        <div class="image-info">
+          <p style="font-size: 50px">Royal Scot Crystal</p>
+          <span style="font-weight: bold; margin-left: 50px; font-size: 40px">Consumer Products</span>
+        </div>
+      </div>
+      <div class="image-container">
+        <div class="image-wrapper">
+          <img src="Images/Restaurant Food.png" alt="Image 5" style="border-radius: 2%; width: 400px; height: 350px" />
+          <button class="view-button"><a href="Work Sites/Elcat Manor.html" class="button-link">View</a></button>
+        </div>
+        <div class="image-info">
+          <p style="font-size: 50px">Elcat<br />Manor</p>
+          <span style="font-weight: bold; margin-left: 50px; font-size: 40px">Fine Dining</span>
+        </div>
+      </div>
+      <div class="image-container">
+        <div class="image-wrapper">
+          <img src="Images/Hotel Pics.png" alt="Image 6" style="border-radius: 2%; width: 400px; height: 350px" />
+          <button class="view-button"><a href="Work Sites/Coral Cave Haven.html" class="button-link">View</a></button>
+        </div>
+        <div class="image-info">
+          <p style="font-size: 50px">Coral Cave<br />Haven</p>
+          <span style="font-weight: bold; margin-left: 50px; font-size: 40px">Travel</span>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 100px; display: flex; justify-content: center" class="fade-in">
+      <div class="image-container">
+        <div class="image-wrapper">
+          <img src="Images/Maldives.png" alt="Image 7" style="border-radius: 2%; width: 400px; height: 350px" />
+          <button class="view-button"><a href="Work Sites/Tranquil Tides Villas.html" class="button-link">View</a></button>
+        </div>
+        <div class="image-info">
+          <p style="font-size: 50px">Tranquil<br />Tides Villas</p>
+          <span style="font-weight: bold; margin-left: 50px; font-size: 40px">Travel</span>
+        </div>
+      </div>
+      <div class="image-container">
+        <div class="image-wrapper">
+          <img src="Images/Sweets.png" alt="Image 8" style="border-radius: 2%; width: 400px; height: 350px" />
+          <button class="view-button"><a href="Work Sites/Sweet Bliss Emporium.html" class="button-link">View</a></button>
+        </div>
+        <div class="image-info">
+          <p style="font-size: 50px">Sweet Bliss<br />Emporium</p>
+          <span style="font-weight: bold; margin-left: 50px; font-size: 40px">Food</span>
+        </div>
+      </div>
+      <div class="image-container">
+        <div class="image-wrapper">
+          <img src="Images/Office Decor.png" alt="Image 9" style="border-radius: 2%; width: 400px; height: 350px" />
+          <button class="view-button"><a href="Work Sites/Elegant Workspace.html" class="button-link">View</a></button>
+        </div>
+        <div class="image-info">
+          <p style="font-size: 50px">Elegant Workspace</p>
+          <span style="font-weight: bold; margin-left: 50px; font-size: 40px">Decor</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-text">
+    <p style="
+          margin-top: 300px;
+          margin-left:20px;
+          margin-bottom:100px;
+          font-family:'Times New Roman', Times, serif;
+          text-align: center;
+          font-size: 70px;
+          font: weight 1000;
+          line-height: 1.2;
+        " class="enterance-text">
+      COLLABORATE WITH <br>US
+    </p>
+    <div class="button-container enterance-text">
+      <p style="font-size: 40px;color:#f6f0f0;" class="arrow right-arrow">&rarr;</p>
+      <a href="Contact.html" class="fade-in view-button1">
+        CONTACT NOW
+      </a>
+      <p style="font-size:40px;color:#f6f0f0;" class="arrow left-arrow">&larr;</p>
+    </div>
+  </div>
+  <footer class="fade-in">
+    <div class="footer-container">
+      <div class="footer-form">
+        <form id="contact-form">
+          <p style="
+                font-size: 6em;
+                font-family: Alumni Sans Pinstripe, sans-serif;
+                text-align: left;
+                margin-left: 40px;
+              ">
+            STAY IN TOUCH
+          </p>
+          <div class="input-wrapper">
+            <input type="text" name="email" id="stay-in-touch" placeholder="YOUR EMAIL ADDRESS" required />
+            <button type="submit" id="submit-btn">SUBMIT →</button>
+          </div>
+        </form>
+      </div>
+      <div class="middle-container">
+        <div class="address-container">
+          <p>ADDRESS:</p>
+          <p>CHITKARA UNIVERSITY</p>
+          <p>PATIALA, PUNJAB</p>
+          <p>LATITUDE:30°52'23.89" N LONGITUDE:6°52'10.78" E</p>
+        </div>
+        <nav class="navbar-vertical">
+          <ul>
+            <li><a href="Home.html">HOME</a></li>
+            <li><a href="Clients.html">CLIENTS</a></li>
+            <li><a href="Work.html">WORK</a></li>
+            <li><a href="Service.html">SERVICES</a></li>
+            <li><a href="Leadership.html">LEADERSHIP</a></li>
+            <li><a href="#">FORUM</a></li>
+            <li><a href="Contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+        <div class="social-links">
+          <a href="https://www.instagram.com" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <div id="google_translate_element">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <p style="margin-left: 25px; margin-bottom: 35px">
+        &copy; 2024 Service Promotion Hub
+      </p>
+      <a href="Privacy Terms.html"
+        style="margin-right: 25px; text-decoration: none; margin-bottom: 35px">PRIVACY+TERMS</a>
+    </div>
+  </footer>
+</body>
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const icon = document.getElementById("toggleIcon");
+    if (document.body.classList.contains("dark-mode")) {
+      icon.classList.remove("fa-moon");
+      icon.classList.add("fa-sun");
+    } else {
+      icon.classList.remove("fa-sun");
+      icon.classList.add("fa-moon");
+    }
+  }
+
+  //Email storage
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      const emailInput = document.getElementById('stay-in-touch');
+      const email = emailInput.value;
+      const options = { timeZone: 'Asia/Kolkata', hour12: false, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      const timestamp = new Date().toLocaleString('en-IN', options);
+      // Store the email and timestamp in local storage
+      localStorage.setItem('email', email);
+      localStorage.setItem('timestamp', timestamp);
+
+      // Optionally, you can clear the input field after submission
+      emailInput.value = '';
+
+      // You can also display a confirmation message or handle further actions here
+      alert('Email stored successfully!');
+    });
+  });
+
+  //Navbar scroll
+  let prevScrollpos = window.pageYOffset;
+  const navbar = document.getElementById("navbar");
+  
+  window.onscroll = function () {
+    const currentScrollPos = window.pageYOffset;
+  
+    if (currentScrollPos > 0) {
+      if (prevScrollpos > currentScrollPos) {
+       
+        navbar.style.top = "0px";
+        navbar.style.backgroundColor = "#121212";
+      } else {
+        navbar.style.top = "-120px";
+      }
+    } else {
+      navbar.style.top = "0";
+      navbar.style.backgroundColor = "transparent";
+    }
+    prevScrollpos = currentScrollPos;
+  };
+  
+</script>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .filter-search {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .filter-label {
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .filter-options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .filter-option {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .filter-option:hover {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        #all-projects {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #all-projects:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="filter-search">
+        <div class="filter-label">Filter:</div>
+        <div class="filter-options">
+            <button class="filter-option" data-category="consumer-products">Consumer Products</button>
+            <button class="filter-option" data-category="travel">Travel</button>
+            <button class="filter-option" data-category="food">Food</button>
+            <button class="filter-option" data-category="fine-dining">Fine Dining</button>
+        </div>
+        <button id="all-projects">All Projects</button>
+    </div>
+    <div class="image-containers">
+        <div class="image-container" data-category="consumer-products">
+            <img src="image1.jpg" alt="Image 1">
+            <div class="image-info">
+                <span>Consumer Products</span>
+            </div>
+        </div>
+        <div class="image-container" data-category="travel">
+            <img src="image2.jpg" alt="Image 2">
+            <div class="image-info">
+                <span>Travel</span>
+            </div>
+        </div>
+        <div class="image-container" data-category="food">
+            <img src="image3.jpg" alt="Image 3">
+            <div class="image-info">
+                <span>Food</span>
+            </div>
+        </div>
+        <div class="image-container" data-category="fine-dining">
+            <img src="image4.jpg" alt="Image 4">
+            <div class="image-info">
+                <span>Fine Dining</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Get the filter option elements
+        const filterOptions = document.querySelectorAll('.filter-option');
+        const allProjectsBtn = document.getElementById('all-projects');
+
+        // Get the image containers
+        const imageContainers = document.querySelectorAll('.image-container');
+
+        // Add event listeners to the filter options
+        filterOptions.forEach(option => {
+            option.addEventListener('click', filterImagesByCategory);
+        });
+
+        // Add an event listener to the all projects button
+        allProjectsBtn.addEventListener('click', showAllProjects);
+
+        // Function to filter images based on the selected category
+        function filterImagesByCategory(e) {
+            const selectedCategory = e.target.getAttribute('data-category');
+            imageContainers.forEach(container => {
+                const containerCategory = container.getAttribute('data-category');
+                if (containerCategory === selectedCategory) {
+                    container.style.display = 'block';
+                } else {
+                    container.style.display = 'none';
+                }
+            });
+        }
+
+        // Function to show all projects
+        function showAllProjects() {
+            imageContainers.forEach(container => {
+                container.style.display = 'block';
+            });
+        }
+    </script>
+</body>
+
+</html>
