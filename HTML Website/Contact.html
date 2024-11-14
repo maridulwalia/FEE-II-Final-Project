@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Service Promotion Hub</title>
+    <link rel="icon" href="Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="Contact Css.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const fadeElements = document.querySelectorAll(
+            ".fade-in,.enterance-text"
+        );
+
+        const observer = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target); // Stop observing once it's visible
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        ); // Adjust threshold as needed
+
+        fadeElements.forEach((element) => {
+            observer.observe(element);
+        });
+    });
+
+</script>
+
+<body>
+    <header>
+        <button class="toggle-button fade-in" onclick="toggleDarkMode()">
+            <i class="fas fa-moon" id="toggleIcon"></i>
+        </button>
+        <div class="logo-container fade-in" id="logoContainer">
+            <a href="Home.html">
+                <img src="Logo.png" alt="Logo" />
+            </a>
+        </div>
+        <nav class="navbar fade-in" id="navbar">
+            <ul>
+                <li><a href="Clients.html">CLIENTS</a></li>
+                <li><a href="Work.html">WORK</a></li>
+                <li><a href="Service.html">SERVICES</a></li>
+                <li><a href="Leadership.html">LEADERSHIP</a></li>
+                <li><a href="#">FORUM</a></li>
+            </ul>
+        </nav>
+        <ul class="right-nav fade-in">
+            <li><a href="Contact.html">CONTACT</a></li>
+        </ul>
+    </header>
+    <section class="contact-section enterance-text">
+        <div class="contact-left">
+            <h1 style="color: #fff;">Get in Touch</h1>
+            <div class="contact-info">
+                <h2 style="color: #fff;">Contact Information</h2>
+                <p style="color: #fff;">
+                    <strong>Address:</strong> CHITKARA UNIVERSITY<br>
+                    <strong>Phone:</strong> XXX-XXX-X718<br>
+                    <strong>Email:</strong> <a href="admissions@chitkara.edu.in">admissions@chitkara.edu.in</a>
+                </p>
+            </div>
+        </div>
+        <div class="contact-right">
+            <form id="contact-form" method="POST" action="Contact.php">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <footer class="fade-in">
+        <div class="footer-container">
+            <div class="footer-form">
+                <form id="contact-form1">
+                    <p
+                        style="font-size:6em;font-family: Alumni Sans Pinstripe , sans-serif;text-align:left;margin-left:40px;">
+                        STAY IN TOUCH</p>
+                    <div class="input-wrapper">
+                        <input type="text" id="stay-in-touch" placeholder="YOUR EMAIL ADDRESS" />
+                        <button type="submit" id="submit-btn">SUBMIT &rarr;</button>
+                    </div>
+                </form>
+            </div>
+            <div class="middle-container">
+                <div class="address-container">
+                    <p>ADDRESS:</p>
+                    <p>CHITKARA UNIVERSITY</p>
+                    <p>PATIALA, PUNJAB</p>
+                    <p>LATITUDE: 30°52'23.89" N LONGITUDE:6°52'10.78" E</p>
+                </div>
+                <nav class="navbar-vertical">
+                    <ul>
+                        <li><a href="Home.html">HOME</a></li>
+                        <li><a href="Clients.html">CLIENTS</a></li>
+                        <li><a href="Work.html">WORK</a></li>
+                        <li><a href="Service.html">SERVICES</a></li>
+                        <li><a href="Leadership.html">LEADERSHIP</a></li>
+                        <li><a href="#">FORUM</a></li>
+                        <li><a href="Contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="social-links">
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <div id="google_translate_element">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-links">
+            <p style="margin-left:25px;margin-bottom:35px;">&copy; 2024 Service Promotion Hub</p>
+            <a href="Privacy Terms.html"
+                style="margin-right: 25px;text-decoration:none;margin-bottom:35px;">PRIVACY+TERMS</a>
+        </div>
+    </footer>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.getElementById('toggleIcon');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+
+        const form = document.getElementById('contact-form');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'Contact.php', true);
+            xhr.onload = () => {
+                if (xhr.status === 200) {
+                    alert('Message sent successfully!');
+                    form.reset();
+                    displayConfirmationMessage();
+                } else {
+                    alert('Error sending message. Please try again.');
+                }
+            };
+            xhr.send(formData);
+        });
+
+        function displayConfirmationMessage() {
+            const existingMessage = form.querySelector('.confirmation-message');
+            if (existingMessage) {
+                form.removeChild(existingMessage);
+            }
+
+            const confirmationMessage = document.createElement('p');
+            confirmationMessage.textContent = 'Thank you for contacting us. We will get back to you soon!';
+            confirmationMessage.style.color = 'white';
+            confirmationMessage.style.fontWeight = 'bolder';
+            confirmationMessage.classList.add('confirmation-message');
+            form.appendChild(confirmationMessage);
+        }
+
+        //Email storage
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('contact-form1').addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                const emailInput = document.getElementById('stay-in-touch');
+                const email = emailInput.value;
+                const options = { timeZone: 'Asia/Kolkata', hour12: false, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+                const timestamp = new Date().toLocaleString('en-IN', options);
+
+                // Store the email and timestamp in local storage
+                localStorage.setItem('email', email);
+                localStorage.setItem('timestamp', timestamp);
+
+                // Optionally, you can clear the input field after submission
+                emailInput.value = '';
+
+                // You can also display a confirmation message or handle further actions here
+                alert('Email stored successfully!');
+            });
+        });
+
+        //Navbar scroll
+        let prevScrollpos = window.pageYOffset;
+        const navbar = document.getElementById("navbar");
+
+        window.onscroll = function () {
+            const currentScrollPos = window.pageYOffset;
+
+            if (currentScrollPos > 0) {
+                if (prevScrollpos > currentScrollPos) {
+                    // User is scrolling up
+                    navbar.style.top = "0px";
+                    navbar.style.backgroundColor = "#121212";
+                } else {
+                    navbar.style.top = "-50px";
+                }
+            } else {
+                navbar.style.top = "0"
+                navbar.style.backgroundColor = "transparent";
+            }
+
+            prevScrollpos = currentScrollPos;
+        };
+    </script>
+</body>
+
+</html>

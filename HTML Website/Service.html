@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Services | Service Promotion Hub</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!--Boostrap CSS-->
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">-->
+    <!--Boostrap JS-->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+    <link rel="icon" href="Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="Service.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9adf147874.js" crossorigin="anonymous"></script>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var tl = gsap.timeline({ repeat: -1 });
+        tl.to("h1", 30, { backgroundPosition: "-460px " });
+    });
+</script>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="Images/Service.jpg" alt="Header Image" class="header-image">
+            <div class="center-container ">
+                <h1 class="header-text zoom-out-init" id="headerTitle" data-translate-key="headerTitle">Services</h1>
+            </div>
+        </div>
+        <button class="toggle-button fade-in" onclick="toggleDarkMode()">
+            <i class="fas fa-moon" id="toggleIcon"></i>
+        </button>
+        <div class="logo-container" id="logoContainer">
+            <a href="Home.html">
+                <img src="Logo.png" alt="Logo" />
+            </a>
+        </div>
+        <nav class="navbar fade-in" id="navbar">
+            <ul>
+                <li><a href="Clients.html" id="clients" data-translate-key="clients">CLIENTS</a></li>
+                <li><a href="Work.html" id="work" data-translate-key="work">WORK</a></li>
+                <li><a href="Service.html" id="services" data-translate-key="services">SERVICES</a></li>
+                <li><a href="Leadership.html" id="leadership" data-translate-key="leadershipe">LEADERSHIP</a></li>
+                <li><a href="#" id="forum" data-translate-key="forum">FORUM</a></li>
+            </ul>
+        </nav>
+        <ul class="right-nav fade-in">
+            <li><a href="Contact.html" id="contact" data-translate-key="contact">CONTACT</a></li>
+        </ul>
+    </header>
+    <div class="main-content">
+        <p style="
+              margin-top: 10px;
+              margin-right: 60px;
+              margin-left: 60px;
+              font-family:'Noto Serif Display',serif;
+              text-align: center;
+              font-size: 135px; 
+              font-weight:300;
+              line-height: 1.2;
+              font-style:italic;
+            " class="enterance-text" id="introText" data-translate-key="introText">
+            CURATED CAMPIGNS.<br>Sales-Driven Strategies<br>and REAL RESULTS.
+        </p>
+    </div>
+    <div class="services enterance-text">
+        <div class="services-top enterance-text">
+            <p class="enterance-text" style="
+          font-size: 35px;
+          font-weight: bolder;
+          font-family: Alumni Sans Pinstripe, sans-serif;
+        " class="enterance-text">
+                01
+            </p>
+            <p class="enterance-text" style="
+              font-size: 65px;
+              font-weight: bolder;
+              font-family:Alumni Sans Pinstripe ,sans-serif;
+              margin-top:20px;
+              font-style:italic;
+            " class="enterance-text" id="ourExpertise" data-translate-key="ourExpertise">
+                OUR EXPERTISE
+            </p>
+            <p class="enterance-text" style="
+          font-size: 35px;
+          font-weight: bolder;
+          font-family: Alumni Sans Pinstripe, sans-serif;
+        " class="enterance-text">
+                &#x2666;
+            </p>
+        </div>
+        <div class="slice-conatiner">
+            <div class="circle-wrapper">
+                <div class="circle">
+                    <div class="slice" data-section="media-relations">
+                        <h3 class="slice-heading" id="mediaRelations" data-translate-key="mediaRelations">Media
+                            Relations & Publicity</h3>
+                    </div>
+                    <div class="slice" data-section="brand-strategy">
+                        <h3 class="slice-heading" id="brandStrategy" data-translate-key="brandStrategy">Brand Strategy &
+                            Positioning</h3>
+                    </div>
+                    <div class="slice" data-section="social-media">
+                        <h3 class="slice-heading" id="socialMediaStrategy" data-translate-key="socialMediaStrategy">Digital & Social
+                            Media Strategy</h3>
+                    </div>
+                    <div class="slice" data-section="product-promotion">
+                        <h3 class="slice-heading" id="productPromotion" data-translate-key="productPromotion">Product & Brand
+                            Promotion</h3>
+                    </div>
+                    <div class="slice" data-section="event-planning">
+                        <h3 class="slice-heading" id="eventPlanning" data-translate-key="eventPlanning">Event Planning &
+                            Management</h3>
+                    </div>
+                </div>
+                <div class="circle-center">
+                    <h2 id="circle-heading" id="chooseService" data-translate-key="chooseService">Choose a Service</h2>
+                </div>
+            </div>
+
+            <section class="content" id="media-relations-content">
+                <h1 class="service-heading" id="mediaRelations" data-translate-key="mediaRelations">Media Relations &
+                    Publicity</h1>
+                <div class="icon-grid enterance-text">
+                    <div class="icon-card">
+                        <i class="fa-solid fa-newspaper fa-2xl"></i>
+                        <h3 id="headerTitle" data-translate-key="headerTitle">Media Relations</h3>
+                        <p id="mediaRelationsDescription" data-translate-key="mediaRelationsDescription">Effective media
+                            outreach and communications training.</p>
+                        <button class="review-button" data-service="media-relations" id="giveReview"
+                            data-translate-key="giveReview">Give Review</button>
+                    </div>
+                    <div class="icon-card">
+                        <img src="Images/Crisis Icon.png" alt="Crisis Communications">
+                        <h3 id="crisisCommunications" data-translate-key="crisisCommunications">Crisis Communications
+                        </h3>
+                        <p id=" crisisCommunicationsDescription" data-translate-key=" crisisCommunicationsDescription">
+                            Handling public relations during crises to protect brand reputation.</p>
+                        <button class="review-button" data-service="crisis-communications" id="giveReview"
+                            data-translate-key="giveReview">Give Review</button>
+                    </div>
+                    <div class="icon-card">
+                        <i class="fa-regular fa-comment fa-2xl"></i>
+                        <h3 id="mediaTraining" data-translate-key="mediaTraining">Media Training</h3>
+                        <p id="mediaTrainingDescription" data-translate-key="mediaTrainingDescription">Equipping
+                            spokespersons with skills to effectively communicate with the media.</p>
+                        <button class="review-button" data-service="media-training" id="giveReview"
+                            data-translate-key="giveReview">Give Review</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content" id="brand-strategy-content">
+                <h1 class="service-heading" id="brandStrategy" data-translate-key="brandStrategy">Brand Strategy &
+                    Positioning</h1>
+                <div class="icon-grid  enterance-text">
+                    <div class="icon-card">
+                        <i class="fa-solid fa-bullseye fa-2xl"></i>
+                        <h3 id="messageDevelopment" data-translate-key="messageDevelopment">Message Development</h3>
+                        <p id="messageDevelopmentDescription" data-translate-key="messageDevelopmentDescription">
+                            Crafting a strong brand identity and positioning in the market.</p>
+                        <button class="review-button" data-service="message-development" id="giveReview"
+                            data-translate-key="giveReview">Give Review</button>
+                    </div>
+                    <div class="icon-card">
+                        <i class="fa-regular fa-star fa-2xl"></i>
+                        <h3 id="expertPositioning" data-translate-key="expertPositioning">Expert Positioning</h3>
+                        <p id="expertPositioningDescription" data-translate-key="expertPositioningDescription">
+                            Establishing individuals as experts to build authority in the industry.</p>
+                        <button class="review-button" data-service="expert-positioning" id="giveReview"
+                            data-translate-key="giveReview">Give Review</button>
+                    </div>
+                    <div class="icon-card">
+                        <i class="fa-regular fa-handshake fa-2xl"></i>
+                        <h3 id=" strategicPartnerships" data-translate-key=" strategicPartnerships">Strategic
+                            Partnerships</h3>
+                        <p id="strategicPartnershipsDescription" data-translate-key="strategicPartnershipsDescription">
+                            Collaborating with other brands for mutual growth and enhanced market presence.</p>
+                        <button class="review-button" data-service="strategic-partnerships" id="giveReview"
+                            data-translate-key="giveReview">Give Review</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content" id="social-media-content">
+                <h1 class="service-heading" id="socialMediaStrategy" data-translate-key="socialMediaStrategy">Digital & Social Media Strategy</h1>
+                <div class="icon-grid  enterance-text">
+                    <div class="icon-card">
+                        <i class="fa-solid fa-hashtag fa-2xl"></i>
+                        <h3 id="socialMediaStrategy" data-translate-key="socialMediaStrategy">Social Media Strategy</h3>
+                        <p id="socialMediaStrategyDescription" data-translate-key="socialMediaStrategyDescription">
+                            Developing and managing social media campaigns to build brand presence.</p>
+                        <button class="review-button" data-service="social-media-strategy" id="giveReview"
+                            data-translate-key="giveReview">Give Review</button>
+                    </div>
+                    <div class="icon-card">
+                        <img src="Images/User crown.png" alt="Influencer Programs">
+                        <h3 id="influencerPrograms" data-translate-key="influencerPrograms">Influencer Programs</h3>
+                        <p id="influencerProgramsDescription" data-translate-key="influencerProgramsDescription">
+                            Collaborating with influencers to promote products and increase brand visibility.</p>
+                        <button class="review-button" data-service="influencer-programs" id="giveReview"
+                            data-translate-key="giveReview">Give Review</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content" id="product-promotion-content">
+                <h1 class="service-heading" id="productPromotion" data-translate-key="hproductPromotion">Product & Brand Promotion
+                </h1>
+                <div class="icon-grid  enterance-text">
+                    <div class="icon-card">
+                        <i class="fa-solid fa-seedling fa-2xl"></i>
+                        <h3 id="productSeeding" data-translate-key="productSeeding">Product Seeding</h3>
+                        <p id="productSeedingDescription" data-translate-key="productSeedingDescription">Distributing
+                            products to key influencers or markets to drive organic promotion.</p>
+                        <button class="review-button" data-service="product-seeding" id="giveReview"
+                            data-translate-key="giveReview">Give Review</button>
+                    </div>
+                    <div class="icon-card">
+                        <i class="fa-solid fa-rocket fa-2xl"></i>
+                        <h3 id="productLaunches" data-translate-key="productLaunches">Product Launches</h3>
+                        <p id="productLaunchesDescription" data-translate-key=" productLaunchesDescription">Executing
+                            strategic launches to introduce products to the market.</p>
+                        <button class="review-button" data-service="product-launches" id="giveReview"
+                            data-translate-key="giveReview">Give Review</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content" id="event-planning-content">
+                <h1 class="service-heading" id="eventPlanning" data-translate-key="eventPlanning">Event Planning &
+                    Management</h1>
+                <div class="icon-grid  enterance-text">
+                    <div class="icon-card">
+                        <i class="fa-regular fa-calendar fa-2xl"></i>
+                        <h3 id="eventPlanning" data-translate-key="eventPlanning">Event Planning</h3>
+                        <p id="eventPlanningDescription" data-translate-key="headerTitle">Organizing and executing
+                            events to boost engagement and brand awareness.</p>
+                        <button class="review-button" data-service="event-planning" id="giveReview"
+                            data-translate-key="giveReview">Give Review</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="contact-text">
+        <p style="
+          margin-top: 300px;
+          margin-left:20px;
+          margin-bottom:100px;
+          font-family:'Times New Roman', Times, serif;
+          text-align: center;
+          font-size: 70px;
+          font: weight 1000;
+          line-height: 1.2;
+        " class="enterance-text" id="collaborateWithUs" data-translate-key="collaborateWithUs">
+            COLLABORATE WITH <br>US
+        </p>
+        <div class="button-container enterance-text">
+            <p style="font-size: 40px;color:#f6f0f0;" class="arrow right-arrow">&rarr;</p>
+            <a href="Contact.html" class="fade-in view-button" id="contactNow" data-translate-key="contactNow">
+                CONTACT NOW
+            </a>
+            <p style="font-size:40px;color:#f6f0f0;" class="arrow left-arrow">&larr;</p>
+        </div>
+    </div>
+    <footer class="fade-in">
+        <div class="footer-container">
+            <div class="footer-form">
+                <form id="contact-form">
+                    <p id="stayInTouch" data-translate-key="stayInTouch" style="
+                font-size: 6em;
+                font-family: Alumni Sans Pinstripe, sans-serif;
+                text-align: left;
+                margin-left: 40px;
+              ">
+                        STAY IN TOUCH
+                    </p>
+                    <div class="input-wrapper">
+                        <input type="text" id="stay-in-touch" placeholder="YOUR EMAIL ADDRESS" id="emailPlaceholder"
+                            data-translate-key="emailPlaceholder" />
+                        <button type="submit" id="submit-btn" id="submitButton" data-translate-key="submitButton">SUBMIT
+                            &rarr;</button>
+                    </div>
+                </form>
+            </div>
+            <div class="middle-container">
+                <div class="address-container">
+                    <p id="address" data-translate-key="address">ADDRESS:</p>
+                    <p id="universityName" data-translate-key="universityName">CHITKARA UNIVERSITY</p>
+                    <p id="location" data-translate-key="location">PATIALA, PUNJAB</p>
+                    <p id="coordinates" data-translate-key="coordinates">LATITUDE: 30° 52' 23.89" N LONGITUDE:6° 52'
+                        10.78" E</p>
+                </div>
+                <nav class="navbar-vertical">
+                    <ul>
+                        <li><a href="Home.html" id="home" data-translate-key="home">HOME</a></li>
+                        <li><a href="Clients.html" id="clients" data-translate-key="clients">CLIENTS</a></li>
+                        <li><a href="Work.html" id="work" data-translate-key="work">WORK</a></li>
+                        <li><a href="Service.html" id="services" data-translate-key="services">SERVICES</a></li>
+                        <li><a href="Leadership.html" id="leadership" data-translate-key="leadership">LEADERSHIP</a>
+                        </li>
+                        <li><a href="#" id="headerTitle" data-translate-key="forum">FORUM</a></li>
+                        <li><a href="Contact.html" id="contact" data-translate-key="contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="social-links">
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" id="language-btn">
+                        <i class="fa-solid fa-language"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-links">
+            <p style="margin-left: 25px; margin-bottom: 35px" id="footerCopyright" data-translate-key="footerCopyright">
+                &copy; 2024 Service Promotion Hub
+            </p>
+            <a href="Privacy Terms.html" style="margin-right: 25px; text-decoration: none; margin-bottom: 35px"
+                id="privacyTerms" href="Privacy Terms.html" data-translate-key="privacyTerms">PRIVACY+TERMS</a>
+        </div>
+    </footer>
+</body>
+<script>
+    document.getElementById('language-btn').addEventListener('click', () => {
+        alert('You are changing the page language from English to Spanish');
+    });
+
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+        const icon = document.getElementById("toggleIcon");
+        if (document.body.classList.contains("dark-mode")) {
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+        } else {
+            icon.classList.remove("fa-sun");
+            icon.classList.add("fa-moon");
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const fadeElements = document.querySelectorAll(
+            ".fade-in,.enterance-text"
+        );
+
+        const observer = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target); // Stop observing once it's visible
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        ); // Adjust threshold as needed
+
+        fadeElements.forEach((element) => {
+            observer.observe(element);
+        });
+    });
+
+    function animateArrows() {
+        const leftArrows = document.querySelectorAll('.left-arrow');
+        const rightArrows = document.querySelectorAll('.right-arrow');
+
+        leftArrows.forEach((leftArrow) => {
+            let leftPosition = 0;
+            let direction = 1;
+
+            function moveArrow() {
+                leftPosition += 1.5 * direction;
+
+                if (leftPosition >= 50 || leftPosition <= 0) {
+                    direction *= -1;
+                }
+
+                leftArrow.style.transform = `translateX(${leftPosition}px)`;
+
+                requestAnimationFrame(moveArrow);
+            }
+
+            moveArrow();
+        });
+
+        rightArrows.forEach((rightArrow) => {
+            let rightPosition = 0;
+            let direction = 1;
+
+            function moveArrow() {
+                rightPosition -= 1.5 * direction;
+
+                if (rightPosition <= -50 || rightPosition >= 0) {
+                    direction *= -1;
+                }
+
+                rightArrow.style.transform = `translateX(${rightPosition}px)`;
+
+                requestAnimationFrame(moveArrow);
+            }
+
+            moveArrow();
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', animateArrows);
+
+    //Email storage
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const emailInput = document.getElementById('stay-in-touch');
+            const email = emailInput.value;
+            const options = { timeZone: 'Asia/Kolkata', hour12: false, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const timestamp = new Date().toLocaleString('en-IN', options);
+
+            // Store the email and timestamp in local storage
+            localStorage.setItem('email', email);
+            localStorage.setItem('timestamp', timestamp);
+
+            // Optionally, you can clear the input field after submission
+            emailInput.value = '';
+
+            // You can also display a confirmation message or handle further actions here
+            alert('Email stored successfully!');
+        });
+    });
+
+    //Navbar scroll
+    let prevScrollpos = window.pageYOffset;
+    const navbar = document.getElementById("navbar");
+
+    window.onscroll = function () {
+        const currentScrollPos = window.pageYOffset;
+
+        if (currentScrollPos > 0) {
+            if (prevScrollpos > currentScrollPos) {
+                // User is scrolling up
+                navbar.style.top = "0px";
+                navbar.style.backgroundColor = "#dfdfdf";
+            } else {
+                navbar.style.top = "-120px";
+            }
+        } else {
+            navbar.style.top = "0"
+            navbar.style.backgroundColor = "transparent";
+        }
+
+        prevScrollpos = currentScrollPos;
+    };
+
+    //Slice Animation
+    const slices = document.querySelectorAll('.slice');
+    const contents = document.querySelectorAll('.content');
+    const circleHeading = document.getElementById('circle-heading');
+
+    slices.forEach((slice, index) => {
+        slice.addEventListener('click', function () {
+            const section = this.dataset.section;
+
+
+            slices.forEach(s => s.classList.remove('active'));
+
+            const adjacentIndex = (index + 1) % slices.length;
+
+
+            const adjacentSlice = slices[adjacentIndex];
+            this.classList.add('active');
+
+
+            circleHeading.innerText = section.replace("-", " ").toUpperCase();
+
+
+            contents.forEach(content => {
+                content.classList.remove('active');
+                if (content.id === `${section}-content`) {
+                    content.classList.add('active');
+                }
+            });
+
+
+            animateSlices(this, adjacentSlice);
+        });
+    });
+
+
+    function animateSlices(currentSlice, adjacentSlice) {
+        const currentTransform = getComputedStyle(currentSlice).transform;
+        const adjacentTransform = getComputedStyle(adjacentSlice).transform;
+
+
+        currentSlice.style.transform = adjacentTransform;
+        adjacentSlice.style.transform = currentTransform;
+    }
+
+    const reviewButtons = document.querySelectorAll('.review-button');
+    reviewButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Implement review functionality here
+            alert('Review functionality to be implemented!');
+        });
+    });
+
+    // Translation data
+    const translations = {
+        en: {
+            headerTitle: "Services",
+            introText: "CURATED CAMPAIGNS. Sales-Driven Strategies and REAL RESULTS.",
+            ourExpertise: "OUR EXPERTISE",
+            service01: "01",
+            diamondSymbol: "&#x2666;",
+            chooseService: "Choose a Service",
+            mediaRelations: "Media Relations & Publicity",
+            mediaRelationsDescription: "Effective media outreach and communications training.",
+            crisisCommunications: "Crisis Communications",
+            crisisCommunicationsDescription: "Handling public relations during crises to protect brand reputation.",
+            mediaTraining: "Media Training",
+            mediaTrainingDescription: "Equipping spokespersons with skills to effectively communicate with the media.",
+            brandStrategy: "Brand Strategy & Positioning",
+            messageDevelopment: "Message Development",
+            messageDevelopmentDescription: "Crafting a strong brand identity and positioning in the market.",
+            expertPositioning: "Expert Positioning",
+            expertPositioningDescription: "Establishing individuals as experts to build authority in the industry.",
+            strategicPartnerships: "Strategic Partnerships",
+            strategicPartnershipsDescription: "Collaborating with other brands for mutual growth and enhanced market presence.",
+            socialMediaStrategy: "Digital & Social Media Strategy",
+            socialMediaStrategyDescription: "Developing and managing social media campaigns to build brand presence.",
+            influencerPrograms: "Influencer Programs",
+            influencerProgramsDescription: "Collaborating with influencers to promote products and increase brand visibility.",
+            productSeeding: "Product Seeding",
+            productSeedingDescription: "Distributing products to key influencers or markets to drive organic promotion.",
+            productLaunches: "Product Launches",
+            productLaunchesDescription: "Executing strategic launches to introduce products to the market.",
+            productPromotion: "Product & Brand Promotion",
+            productPromotionDescription: "Promoting products and brands to enhance visibility and market reach.",
+            eventPlanning: "Event Planning & Management",
+            eventPlanningDescription: "Organizing and executing events to boost engagement and brand awareness.",
+            giveReview: "Give Review",
+            collaborateWithUs: "COLLABORATE WITH US",
+            contactNow: "CONTACT NOW",
+            stayInTouch: "STAY IN TOUCH",
+            emailPlaceholder: "YOUR EMAIL ADDRESS",
+            submitButton: "SUBMIT",
+            address: "ADDRESS:",
+            universityName: "CHITKARA UNIVERSITY",
+            location: "PATIALA, PUNJAB",
+            coordinates: "LATITUDE: 30° 52' 23.89\" N LONGITUDE: 6° 52' 10.78\" E",
+            footerCopyright: "&copy; 2024 Service Promotion Hub",
+            privacyTerms: "PRIVACY+TERMS",
+            home: "HOME",
+            clients: "CLIENTS",
+            work: "WORK",
+            services: "SERVICES",
+            leadership: "LEADERSHIP",
+            forum: "FORUM",
+            contact: "CONTACT"
+        },
+        es: {
+            headerTitle: "Servicios",
+            introText: "CAMPAÑAS CURADAS. Estrategias impulsadas por ventas y RESULTADOS REALES.",
+            ourExpertise: "NUESTRA EXPERIENCIA",
+            service01: "01",
+            diamondSymbol: "&#x2666;",
+            chooseService: "Elige un Servicio",
+            mediaRelations: "Relaciones con los Medios y Publicidad",
+            mediaRelationsDescription: "Alcance mediático efectivo y entrenamiento en comunicaciones.",
+            crisisCommunications: "Comunicación en Crisis",
+            crisisCommunicationsDescription: "Manejo de relaciones públicas durante crisis para proteger la reputación de la marca.",
+            mediaTraining: "Entrenamiento en Medios",
+            mediaTrainingDescription: "Equipando a los portavoces con habilidades para comunicarse eficazmente con los medios.",
+            brandStrategy: "Estrategia y Posicionamiento de Marca",
+            messageDevelopment: "Desarrollo de Mensajes",
+            messageDevelopmentDescription: "Creando una identidad de marca sólida y posicionamiento en el mercado.",
+            expertPositioning: "Posicionamiento de Expertos",
+            expertPositioningDescription: "Estableciendo individuos como expertos para construir autoridad en la industria.",
+            strategicPartnerships: "Asociaciones Estratégicas",
+            strategicPartnershipsDescription: "Colaborando con otras marcas para un crecimiento mutuo y mayor presencia en el mercado.",
+            socialMediaStrategy: "Estrategia Digital y de Redes Sociales",
+            socialMediaStrategyDescription: "Desarrollando y gestionando campañas en redes sociales para construir presencia de marca.",
+            influencerPrograms: "Programas de Influencers",
+            influencerProgramsDescription: "Colaborando con influencers para promover productos y aumentar la visibilidad de la marca.",
+            productSeeding: "Distribución de Productos",
+            productSeedingDescription: "Distribución de productos a influencers clave o mercados para impulsar la promoción orgánica.",
+            productLaunches: "Lanzamientos de Productos",
+            productLaunchesDescription: "Ejecutando lanzamientos estratégicos para introducir productos al mercado.",
+            productPromotion: "Promoción de Productos y Marcas",
+            productPromotionDescription: "Promocionando productos y marcas para mejorar la visibilidad y el alcance en el mercado.",
+            eventPlanning: "Planificación y Gestión de Eventos",
+            eventPlanningDescription: "Organizando y ejecutando eventos para aumentar el compromiso y el reconocimiento de la marca.",
+            giveReview: "Dar Reseña",
+            collaborateWithUs: "COLABORA CON NOSOTROS",
+            contactNow: "CONTÁCTANOS",
+            stayInTouch: "MANTENTE EN CONTACTO",
+            emailPlaceholder: "TU DIRECCIÓN DE CORREO ELECTRÓNICO",
+            submitButton: "ENVIAR",
+            address: "DIRECCIÓN:",
+            universityName: "UNIVERSIDAD CHITKARA",
+            location: "PATIALA, PUNJAB",
+            coordinates: "LATITUD: 30° 52' 23.89\" N LONGITUD: 6° 52' 10.78\" E",
+            footerCopyright: "&copy; 2024 Centro de Promoción de Servicios",
+            privacyTerms: "PRIVACIDAD + TÉRMINOS",
+            home: "INICIO",
+            clients: "CLIENTES",
+            work: "TRABAJO",
+            services: "SERVICIOS",
+            leadership: "LIDERAZGO",
+            forum: "FORO",
+            contact: "CONTACTO"
+        }
+    };
+
+
+    // Function to set language based on selected language code
+    function setLanguage(lang) {
+        const elements = document.querySelectorAll("[data-translate-key]");
+        elements.forEach(element => {
+            const key = element.getAttribute("data-translate-key");
+            if (translations[lang][key]) {
+                element.innerHTML = translations[lang][key];
+            }
+        });
+    }
+
+    // Event listener to switch language
+    document.getElementById("language-btn").addEventListener("click", () => {
+        const currentLang = document.documentElement.lang || "en";
+        const newLang = currentLang === "en" ? "es" : "en";
+        setLanguage(newLang);
+        document.documentElement.lang = newLang;
+    });
+
+    // Initialize default language (English)
+    document.addEventListener("DOMContentLoaded", () => {
+        setLanguage("en");
+    });
+
+
+</script>
+
+</html>

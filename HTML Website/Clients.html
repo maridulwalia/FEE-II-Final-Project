@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Clients | Our Client Brands</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Boostrap CSS-->
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">-->
+    <link rel="icon" href="Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Clients Css.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9adf147874.js" crossorigin="anonymous"></script>
+</head>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const fadeElements = document.querySelectorAll(
+            ".fade-in,.enterance-text"
+        );
+
+        const zoomElements = document.querySelectorAll(".zoom-out-element"); // Select elements that should have the zoom out animation
+
+        const observer = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target); // Stop observing once it's visible
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        ); // Adjust threshold as needed
+
+        fadeElements.forEach((element) => {
+            observer.observe(element);
+        });
+
+        // Add zoom out animation to specific elements
+        zoomElements.forEach((element) => {
+            observer.observe(element);
+            element.classList.add("zoom-out-init"); // Add initial class to trigger animation
+        });
+    });
+
+    function animateArrows() {
+        const leftArrows = document.querySelectorAll('.left-arrow');
+        const rightArrows = document.querySelectorAll('.right-arrow');
+
+        leftArrows.forEach((leftArrow) => {
+            let leftPosition = 0;
+            let direction = 1;
+
+            function moveArrow() {
+                leftPosition += 1.5 * direction;
+
+                if (leftPosition >= 50 || leftPosition <= 0) {
+                    direction *= -1;
+                }
+
+                leftArrow.style.transform = `translateX(${leftPosition}px)`;
+
+                requestAnimationFrame(moveArrow);
+            }
+
+            moveArrow();
+        });
+
+        rightArrows.forEach((rightArrow) => {
+            let rightPosition = 0;
+            let direction = 1;
+
+            function moveArrow() {
+                rightPosition -= 1.5 * direction;
+
+                if (rightPosition <= -50 || rightPosition >= 0) {
+                    direction *= -1;
+                }
+
+                rightArrow.style.transform = `translateX(${rightPosition}px)`;
+
+                requestAnimationFrame(moveArrow);
+            }
+
+            moveArrow();
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', animateArrows);
+
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+    }
+
+</script>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="Images/Client 1.png" alt="Header Image" class="header-image">
+            <div class="center-container ">
+                <h1 class="header-text zoom-out-init">Our Clients</h1>
+            </div>
+        </div>
+        <button class="toggle-button fade-in" onclick="toggleDarkMode()" title="Toggle Dark Mode">
+            <i class="fas fa-moon" id="toggleIcon"></i>
+        </button>
+        <div class="logo-container" id="logoContainer">
+            <a href="Home.html">
+                <img src="Logo.png" alt="Logo" />
+            </a>
+        </div>
+        <nav class="navbar fade-in" id="navbar">
+            <ul>
+                <li><a href="Clients.html">CLIENTS</a></li>
+                <li><a href="Work.html">WORK</a></li>
+                <li><a href="Service.html">SERVICES</a></li>
+                <li><a href="Leadership.html">LEADERSHIP</a></li>
+                <li><a href="#">FORUM</a></li>
+            </ul>
+        </nav>
+        <ul class="right-nav fade-in">
+            <li><a href="Contact.html">CONTACT</a></li>
+        </ul>
+    </header>
+    <!--Boostrap JS-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">-->
+    <div class="main-content">
+        <div style="margin-top: 50px; display: flex; justify-content: center;" class="fade-in">
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="Images/Cafe elysee.jpg" alt="Image 1" style="border-radius: 2%;">
+                    <div class="hover-text"
+                        style="color: #121212;background-color:#fff;border-radius:2%;padding:5px;font-family:Merriweather;width:380px;height:360px;margin-top:15px;padding:5px;">
+                        Café Elsyee is a modern coffee house that blends chic design with a passion for quality. Known
+                        for its expertly crafted coffees and artisanal teas, this café is a hub for urbanites seeking a
+                        sophisticated yet cozy environment having a minimalist decor and serene ambiance.
+                    </div>
+                </div>
+                <!-- <div class="image-info">
+                </div> -->
+            </div>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="Images/Forest Camp.jpg" alt="Image 2" style="border-radius: 2%;">
+                    <div class="hover-text"
+                        style="color: #121212;background-color:#fff;border-radius:2%;font-family:Merriweather;width:380px;height:380px;padding:5px;">
+                        Forest Camp offers a unique blend of adventure and relaxation, nestled within the heart of
+                        nature. This eco-friendly retreat invites guests to disconnect from the hustle and bustle of
+                        everyday life and reconnect with the natural world. The accommodations are surrounded by lush
+                        forests, offering activities such as hikes, wildlife spotting, and campfires.
+                    </div>
+                </div>
+                <!-- <div class="image-info">
+                </div> -->
+            </div>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="Images/Herb Elixer.jpg" alt="Image 3" style="border-radius: 2%;">
+                    <div class="hover-text"
+                        style="color: #121212;background-color:#fff;border-radius:2%;font-family:Merriweather;width:380px;height:360px;margin-top:15px;padding:5px;">
+                        Herb Elixer offers a range of wellness products crafted from the finest natural herbs, focusing
+                        on holistic health and vitality. These elixers are meticulously formulated to provide benefits
+                        that go beyond the ordinary, making them a staple for those who value natural, effective
+                        wellness solutions</div>
+                </div>
+                <!-- <div class="image-info">
+                </div> -->
+            </div>
+        </div>
+        <div style="margin-top:50px; display: flex; justify-content: center;" class="fade-in">
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="Images/Royal scot crystal.jpg" alt="Image 4" style="border-radius: 2%;">
+                    <div class="hover-text"
+                        style="color: #121212;background-color:#fff;border-radius:2%;font-family:Merriweather;width:380px;height:360px;margin-top:15px;padding:5px;">
+                        Royal Scot Crystals elevates the experience of fine dining and entertaining with its exquisite
+                        wine glasses. Renowned for their impeccable craftsmanship, these crystal glasses combine
+                        traditional artistry with contemporary design, making them a symbol of luxury and
+                        sophistication.</div>
+                </div>
+                <!-- <div class="image-info">
+                    <p style="font-size:50px;">Royal Scott Crystals</p>
+                </div> -->
+            </div>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="Images/Elcat Manor.jpg" alt="Image 5" style="border-radius: 2%;">
+                    <div class="hover-text"
+                        style="color: #121212;background-color:#fff;border-radius:2%;font-family:Merriweather;width:380px;height:360px;margin-top:15px;padding:5px;">
+                        Elcart Manor exudes elegance and sophistication, offering a fine dining experience that blends
+                        classic European cuisine with contemporary culinary techniques. The manor's exquisite setting
+                        complements its carefully curated menu, making it a haven for those who appreciate the finer
+                        things in life.
+                    </div>
+                </div>
+                <!-- <div class="image-info">
+                    <p style="font-size:50px;">Elcat Manor</p>
+                </div> -->
+            </div>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="Images/Coral Cave Haven.jpg" alt="Image 6" style="border-radius: 2%;">
+                    <div class="hover-text"
+                        style="color: #121212;background-color:#fff;border-radius:2%;font-family:Merriweather;width:380px;height:360px;margin-top:15px;padding:5px;">
+                        Coral Cave Haven is a coastal paradise, combining stunning ocean views with luxurious
+                        accommodations. Located along a pristine shoreline, this hotel features rooms carved into
+                        natural rock formations, offering an intimate and immersive experience of the sea through
+                        snorkeling and diving adventures.</div>
+                </div>
+                <!-- <div class="image-info">
+                    <p style="font-size:50px;">Coral Cave Haven</p>
+                </div> -->
+            </div>
+        </div>
+        <div style="margin-top:50px; display: flex; justify-content: center;" class="fade-in">
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="Images/Tranquil Tides villas.jpg" alt="Image 7" style="border-radius: 2%;">
+                    <div class="hover-text"
+                        style="color: #121212;background-color:#fff;border-radius:2%;font-family:Merriweather;width:380px;height:360px;margin-top:15px;padding:5px;">
+                        Tranquil Tides Villas offers the ultimate in privacy and relaxation, with a collection of
+                        secluded beachfront villas. Each villa is a personal retreat, featuring private pools, direct
+                        beach access, and breathtaking ocean views. The emphasis here is on tranquility and personalized
+                        service.</div>
+                </div>
+                <!-- <div class="image-info">
+                    <p style="font-size:50px;">Tranquil Tides Villas</p>
+                </div> -->
+            </div>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="Images/Sweet bliss emporium.jpg" alt="Image 8" style="border-radius: 2%;">
+                    <div class="hover-text"
+                        style="color: #121212;background-color:#fff;border-radius:2%;font-family:Merriweather;width:380px;height:360px;margin-top:15px;padding:5px;">
+                        Indulge in a world of confections at Sweet Bliss Emporium, two destinations for dessert
+                        lovers, offering a cozy haven filled with handcrafted treats, from decadent cakes to
+                        artisanal chocolates, perfect for satisfying any sweet tooth, taking you on a journey
+                        through traditional and modern sweets.
+                    </div>
+                </div>
+                <!-- <div class="image-info">
+                    <p style="font-size:50px;">Sweet Bliss Emporium</p>
+                </div> -->
+            </div>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="Images/Elegant Workspace.jpg" alt="Image 9" style="border-radius: 2%;">
+                    <div class="hover-text"
+                        style="color: #121212;background-color:#fff;border-radius:2%;font-family:Merriweather;width:380px;height:360px;margin-top:15px;padding:5px;">
+                        Elegant Workspace transforms workspaces with its sophisticated office décor. Specializing in
+                        functional yet aesthetically pleasing items, this brand offers everything from ergonomic
+                        furniture to artistic desk accessories, designed to inspire creativity and productivity.</div>
+                </div>
+                <!-- <div class="image-info">
+                    <p style="font-size:50px;">Elegant Workspace</p>
+                </div> -->
+            </div>
+        </div>
+        <div style="margin-top:50px; display: flex; justify-content: center;" class="fade-in">
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="Images/Vintage cafe charm.jpg" alt="Image 10" style="border-radius: 2%;">
+                    <div class="hover-text"
+                        style="color: #121212;background-color:#fff;border-radius:2%;font-family:Merriweather;width:380px;height:360px;margin-top:15px;padding:5px;">
+                        Vintage Café Charm transports patrons to a bygone era, with its nostalgic décor and classic
+                        offerings. This café is a haven for those who appreciate the warmth of tradition, featuring a
+                        menu that includes timeless coffee brews, hearty pastries, and comforting meals.
+                    </div>
+                </div>
+                <!-- <div class="image-info">
+                    <p style="font-size:50px;">Vintage Cafe Charm</p>
+                </div> -->
+            </div>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="Images/Mystic Bistro.jpg" alt="Image 11" style="border-radius: 2%;">
+                    <div class="hover-text"
+                        style="color: #121212;background-color:#fff;border-radius:2%;font-family:Merriweather;width:380px;height:360px;margin-top:15px;padding:5px;">
+                        Mystic Bistro is a whimsical escape into the world of fusion cuisine. Combining elements of
+                        Eastern and Western culinary traditions, this bistro creates an enchanting dining experience
+                        where familiar flavors meet unexpected surprises.
+                    </div>
+                </div>
+                <!-- <div class="image-info">
+                    <p style="font-size:50px;">Mystic Bistro</p>
+                </div> -->
+            </div>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="Images/Spice Feast.jpg" alt="Image 12" style="border-radius: 2%;">
+                    <div class="hover-text"
+                        style="color: #121212;background-color:#fff;border-radius:2%;font-family:Merriweather;width:380px;height:360px;margin-top:15px;padding:5px;">
+                        Spice Feast celebrates the rich tapestry of global spices, crafting a menu that is a feast for
+                        the senses. Here, traditional dishes are elevated with innovative twists, allowing diners to
+                        explore the world of spices in every bite.
+                    </div>
+                </div>
+                <!-- <div class="image-info">
+                    <p style="font-size:50px;">Spice Feast</p>
+                </div> -->
+            </div>
+        </div>
+        <div style="margin-top:50px; display: flex; justify-content: center;" class="fade-in">
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="Images/Brew Haven.jpg" alt="Image 13" style="border-radius: 2%;">
+                    <div class="hover-text"
+                        style="color: #121212;background-color:#fff;border-radius:2%;font-family:Merriweather;width:380px;height:360px;margin-top:15px;padding:5px;">
+                        Brew Haven is a versatile destination that caters to both coffee aficionados and craft beer
+                        enthusiasts. By day, it serves as a specialty coffee house with a focus on unique brews and
+                        innovative brewing techniques. By night, it transforms into a vibrant bar offering an impressive
+                        selection of craft beers, local brews, and creative cocktails.</div>
+                </div>
+                <!-- <div class="image-info">
+                    <p style="font-size:50px;">Brew Haven</p>
+                </div> -->
+            </div>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="Images/The Style Loft.jpg" alt="Image 14" style="border-radius: 2%;">
+                    <div class="hover-text"
+                        style="color: #121212;background-color:#fff;border-radius:2%;font-family:Merriweather;width:380px;height:360px;margin-top:15px;padding:5px;">
+                        Dive into the world of fashion with three distinct clothing boutiques, each offering a unique
+                        approach to style and self-expression. The Style Loft is a haven for designer clothing
+                        enthusiasts, showcasing curated collections from renowned fashion houses. Here, every piece is a
+                        work of art, reflecting the latest trends and timeless elegance.</div>
+                </div>
+                <!-- <div class="image-info">
+                    <p style="font-size:50px;">The Style Loft</p>
+                </div> -->
+            </div>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="Images/The Vault Escape.jpg" alt="Image 15" style="border-radius: 2%;">
+                    <div class="hover-text"
+                        style="color: #121212;background-color:#fff;border-radius:2%;font-family:Merriweather;width:380px;height:360px;margin-top:15px;padding:5px;">
+                        The Vault Escape brings a blend of mystery and adventure to fashion. Inspired by underground
+                        aesthetics, this boutique offers edgy, avant-garde clothing that pushes the boundaries of
+                        conventional style. With its bold, unconventional designs, The Vault Escape caters to those who
+                        dare to be different.</div>
+                </div>
+                <!-- <div class="image-info">
+                    <p style="font-size:50px;">The Vault Escape</p>
+                </div> -->
+            </div>
+        </div>
+        <div style="margin-top:50px; display: flex; justify-content: center;margin-bottom:50px;" class="fade-in">
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="Images/Opulent Oasis.jpg" alt="Image 16" style="border-radius: 2%;">
+                    <div class="hover-text"
+                        style="color: #121212;background-color:#fff;border-radius:2%;font-family:Merriweather;width:380px;height:360px;margin-top:15px;padding:5px;">
+                        Discover a world of luxurious retreats, offering a distinct experience tailored to
+                        different travel desires. Opulent Oasis is the epitome of urban luxury, providing a lavish
+                        escape within the heart of a bustling city. With its extravagant suites, world-class amenities,
+                        and personalized services, it caters to those seeking an indulgent and sophisticated stay.</div>
+                </div>
+                <!-- <div class="image-info">
+                    <p style="font-size:50px;">Opulent Oasis</p>
+                </div> -->
+            </div>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="Images/Biryani Bazar.jpg" alt="Image 17" style="border-radius: 2%;">
+                    <div class="hover-text"
+                        style="color: #121212;background-color:#fff;border-radius:2%;font-family:Merriweather;width:380px;height:360px;margin-top:15px;padding:5px;">
+                        Biryani Bazaar stands as a
+                        vibrant tribute to the timeless Indian dish, Biryani. The restaurant captures the essence of
+                        regional variations, from the fragrant Hyderabadi Biryani to the rich and spicy Kolkata Biryani,
+                        offering an authentic experience of this beloved delicacy.
+                    </div>
+                </div>
+                <!-- <div class="image-info">
+                    <p style="font-size:50px;">Biryani Bazaar</p>
+                </div> -->
+            </div>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="Images/Novasphere.jpg" alt="Image 18" style="border-radius: 2%;">
+                    <div class="hover-text"
+                        style="color: #121212;background-color:#fff;border-radius:2%;font-family:Merriweather;width:380px;height:360px;margin-top:15px;padding:5px;">
+                        Discover a world of luxurious retreats, each offering a distinct experience tailored to
+                        different travel desires. Opulent Oasis is the epitome of urban luxury, providing a lavish
+                        escape within the heart of a bustling city.</div>
+                </div>
+                <!-- <div class="image-info">
+                    <p style="font-size:50px;">Nova Sphere</p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="contact-text">
+        <p style="
+              margin-top: 300px;
+              margin-left:20px;
+              margin-bottom:100px;
+              font-family:'Times New Roman', Times, serif;
+              text-align: center;
+              font-size: 70px;
+              font: weight 1000;
+              line-height: 1.2;
+            " class="enterance-text">
+            COLLABORATE WITH <br>US
+        </p>
+        <div class="button-container enterance-text">
+            <p style="font-size: 40px;color:#f6f0f0;" class="arrow right-arrow">&rarr;</p>
+            <a href="Contact.html" class="fade-in view-button">
+                CONTACT NOW
+            </a>
+            <p style="font-size:40px;color:#f6f0f0;" class="arrow left-arrow">&larr;</p>
+        </div>
+    </div>
+    <footer class="fade-in">
+        <div class="footer-container">
+            <div class="footer-form">
+                <form id="contact-form">
+                    <p
+                        style="font-size:6em;font-family: Alumni Sans Pinstripe , sans-serif;text-align:left;margin-left:40px;">
+                        STAY IN TOUCH</p>
+                    <div class="input-wrapper">
+                        <input type="text" id="stay-in-touch" placeholder="YOUR EMAIL ADDRESS" />
+                        <button type="submit" id="submit-btn">SUBMIT &rarr;</button>
+                    </div>
+                </form>
+            </div>
+            <div class="middle-container">
+                <div class="address-container">
+                    <p>ADDRESS:</p>
+                    <p>CHITKARA UNIVERSITY</p>
+                    <p>PATIALA, PUNJAB</p>
+                    <p>LATITUDE:30°52'23.89" N LONGITUDE:6°52'10.78" E</p>
+                </div>
+                <nav class="navbar-vertical">
+                    <ul>
+                        <li><a href="Home.html">HOME</a></li>
+                        <li><a href="Clients.html">CLIENTS</a></li>
+                        <li><a href="Work.html">WORK</a></li>
+                        <li><a href="Service.html">SERVICES</a></li>
+                        <li><a href="Leadership.html">LEADERSHIP</a></li>
+                        <li><a href="#">FORUM</a></li>
+                        <li><a href="Contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="social-links">
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <div id="google_translate_element">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-links">
+            <p style="margin-left:25px;margin-bottom:25px;">&copy; 2024 Service Promotion Hub</p>
+            <a href="Privacy Terms.html"
+                style="margin-right: 25px;text-decoration:none;margin-bottom:25px;">PRIVACY+TERMS</a>
+        </div>
+    </footer>
+</body>
+<script>
+
+    //Navbar scroll
+    let prevScrollpos = window.pageYOffset;
+    const navbar = document.getElementById("navbar");
+
+    window.onscroll = function () {
+        const currentScrollPos = window.pageYOffset;
+
+        if (currentScrollPos > 0) {
+
+            if (prevScrollpos > currentScrollPos) {
+                // User is scrolling up
+                navbar.style.top = "0";
+                navbar.style.backgroundColor = "#121212";
+            } else {
+
+                navbar.style.top = "-120px";
+            }
+        } else {
+
+            navbar.style.backgroundColor = "transparent";
+        }
+
+        prevScrollpos = currentScrollPos;
+    };
+
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        const icon = document.getElementById('toggleIcon');
+        if (document.body.classList.contains('dark-mode')) {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
+    }
+
+    //Email storage
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const emailInput = document.getElementById('stay-in-touch');
+            const email = emailInput.value;
+            const options = { timeZone: 'Asia/Kolkata', hour12: false, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const timestamp = new Date().toLocaleString('en-IN', options);
+
+            // Store the email and timestamp in local storage
+            localStorage.setItem('email', email);
+            localStorage.setItem('timestamp', timestamp);
+
+            // Optionally, you can clear the input field after submission
+            emailInput.value = '';
+
+            // You can also display a confirmation message or handle further actions here
+            alert('Email stored successfully!');
+        });
+    });
+</script>
+
+</html>
